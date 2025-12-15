@@ -1,0 +1,348 @@
+/* Estilos para la página de crear orden */
+
+.main-content {
+    padding-top: 80px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1f2433, #2d3250);
+}
+
+/* Sección del Formulario */
+.orden-form-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(35, 47, 70, 0.06);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #2b2f3a;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 1rem;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e6e9ef;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2b2f3a;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #2563eb;
+}
+
+/* Grid para formularios */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Grupo de Formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #2b2f3a;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #e6e9ef;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #2b2f3a;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+    background-color: #f5f7fa;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.form-group input[readonly] {
+    background-color: #f5f7fa;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Botón Agregar Producto */
+.btn-add-producto {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    margin-top: 1rem;
+}
+
+.btn-add-producto:hover {
+    background-color: #0d9669;
+}
+
+/* Tabla de Productos */
+.table-responsive-form {
+    overflow-x: auto;
+    border: 1px solid #e6e9ef;
+    border-radius: 8px;
+    background: #f5f7fa;
+}
+
+.productos-orden-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.productos-orden-table thead {
+    background-color: #f0f3f8;
+}
+
+.productos-orden-table th,
+.productos-orden-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e6e9ef;
+    font-size: 14px;
+}
+
+.productos-orden-table th {
+    font-weight: 700;
+    color: #2b2f3a;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.productos-orden-table tbody tr:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+.productos-orden-table td {
+    color: #2b2f3a;
+}
+
+.btn-remove-producto {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-remove-producto:hover {
+    background-color: #dc2626;
+}
+
+/* Mensaje cuando la tabla está vacía */
+.empty-table-message {
+    padding: 2rem;
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.empty-table-message.hidden {
+    display: none;
+}
+
+/* Resumen */
+.resumen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    background-color: #f5f7fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.resumen-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.resumen-label {
+    font-weight: 600;
+    color: #2b2f3a;
+    font-size: 14px;
+}
+
+.resumen-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.resumen-value.total {
+    color: #10b981;
+    font-size: 22px;
+}
+
+.resumen-input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e6e9ef;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 120px;
+}
+
+.resumen-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* Botones de Acción */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e6e9ef;
+}
+
+.btn-save-form,
+.btn-cancel-form {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save-form {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-save-form:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-cancel-form {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-cancel-form:hover {
+    background-color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .orden-form-section {
+        padding: 1rem;
+    }
+
+    .form-title {
+        font-size: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resumen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resumen-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-save-form,
+    .btn-cancel-form {
+        width: 100%;
+    }
+
+    .productos-orden-table {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-title {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Evita zoom en iOS */
+    }
+
+    .productos-orden-table th,
+    .productos-orden-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 12px;
+    }
+
+    .btn-remove-producto {
+        padding: 0.4rem 0.8rem;
+        font-size: 11px;
+    }
+}
